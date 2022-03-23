@@ -45,7 +45,7 @@ namespace DrawBehindDesktopIcons
 
         public static NotifyIcon trayIcon;
 
-        public static ChromiumWebBrowser chromeBrowser;
+        //public static ChromiumWebBrowser chromeBrowser;
 
         private enum CtrlType
         {
@@ -228,12 +228,13 @@ namespace DrawBehindDesktopIcons
                     MessageBox.Show("Error The html file doesn't exists : " + page);
                 }
 
-                CefSettings settings = new CefSettings();
+                /*CefSettings settings = new CefSettings();
                 // Allow the use of local resources in the browser
                 BrowserSettings browserSettings = new BrowserSettings();
-                browserSettings.FileAccessFromFileUrls = CefState.Enabled;
-                browserSettings.UniversalAccessFromFileUrls = CefState.Enabled;
-
+                //browserSettings.FileAccessFromFileUrls = CefState.Enabled;
+                //browserSettings.UniversalAccessFromFileUrls = CefState.Enabled;
+                browserSettings.WebGl = CefState.Enabled;
+                browserSettings.LocalStorage = CefState.Enabled;
 
                 // Initialize cef with the provided settings
                 Cef.Initialize(settings);
@@ -246,6 +247,9 @@ namespace DrawBehindDesktopIcons
                 // Add it to the form and fill it to the form window.
                 form.Controls.Add(chromeBrowser);
                 chromeBrowser.Dock = DockStyle.Fill;
+                */
+               // var browser = new ChromiumWebBrowser("www.google.com");
+                //form.Controls.Add(browser);
 
 
 
